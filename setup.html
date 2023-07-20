@@ -20,42 +20,23 @@
     </nav>
 
     <main>
-        <section id="income">
-            <h2>Income Tracking</h2>
-            <!-- Add your income tracking form and fields here -->
-        </section>
+        <section id="setup">
+            <h2>Setup</h2>
+            <form id="accountForm">
+                <label for="accountType">Account Type:</label>
+                <select id="accountType" name="accountType">
+                    <option value="savings">Savings</option>
+                    <option value="checking">Checking</option>
+                    <!-- Add more options for other account types as needed -->
+                </select>
 
-        <section id="expenses">
-            <h2>Expense Tracking</h2>
-            <!-- Add your expense tracking form and fields here -->
-        </section>
+                <label for="accountName">Custom Account Name:</label>
+                <input type="text" id="accountName" name="accountName" placeholder="e.g. My Savings">
 
-        <section id="budget">
-            <h2>Budgeting</h2>
-            <!-- Add your budgeting form and fields here -->
-        </section>
+                <label for="currentAmount">Current Amount:</label>
+                <input type="number" id="currentAmount" name="currentAmount" placeholder="e.g. 1000">
 
-        <section id="summary">
-            <h2>Weekly Summary</h2>
-            <!-- Add the weekly summary of expenses and budget here -->
-        </section>
-
-        <section id="savings">
-            <h2>Savings</h2>
-            <form>
-                <label for="savingsAccount1">Savings Account 1:</label>
-                <input type="text" id="savingsAccount1" name="savingsAccount1">
-
-                <label for="savingsAccount2">Savings Account 2:</label>
-                <input type="text" id="savingsAccount2" name="savingsAccount2">
-
-                <!-- Add more input fields for other types of accounts as needed -->
-                <!-- For example:
-                <label for="checkingAccount">Checking Account:</label>
-                <input type="text" id="checkingAccount" name="checkingAccount">
-                -->
-                
-                <input type="submit" value="Submit">
+                <input type="submit" value="Add Account">
             </form>
         </section>
     </main>
@@ -63,5 +44,7 @@
     <footer>
         <p>&copy; 2023 MyFinance Tracker. All rights reserved.</p>
     </footer>
+
+    <script src=""app.js></script> <!-- Link to the JavaScript file -->
 </body>
 </html>
