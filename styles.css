@@ -1,19 +1,13 @@
-/* Basic styling for header and navigation */
-header, nav {
-    background-color: #007bff;
+/* Add your CSS styles here */
+header {
+    background-color: #333;
     color: #fff;
-    padding: 10px;
-    text-align: center;
+    padding: 1rem;
   }
   
-  nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  nav li {
-    display: inline;
-    margin-right: 20px;
+  nav {
+    display: flex;
+    gap: 1rem;
   }
   
   nav a {
@@ -21,28 +15,13 @@ header, nav {
     text-decoration: none;
   }
   
-  /* Styling for the main content area */
-  main {
-    padding: 20px;
-  }
-  
   section {
-    margin-bottom: 20px;
+    padding: 1rem;
+  }
+  
+  .account-card {
     border: 1px solid #ccc;
-    padding: 10px;
-  }
-  
-  /* Styling for the footer */
-  footer {
-    background-color: #f5f5f5;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  /* Additional styling for account list in the dashboard */
-  #accountList {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 20px;
+    padding: 1rem;
+    margin: 1rem 0;
   }
   

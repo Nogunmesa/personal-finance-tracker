@@ -1,55 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyFinance Tracker - Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>MyFinance Tracker</title>
 </head>
 <body>
-    <header>
-        <h1>MyFinance Tracker</h1>
-    </header>
-
+  <header>
+    <h1>MyFinance Tracker</h1>
     <nav>
-        <ul>
-            <li><a href="index.html">Dashboard</a></li>
-            <li><a href="transactions.html">Transactions</a></li>
-            <li><a href="setup.html">Setup</a></li>
-        </ul>
+      <a href="index.html">Dashboard</a>
+      <a href="setup.html">Setup</a>
+      <a href="transactions.html">Transactions</a>
     </nav>
+  </header>
 
-    <main>
-        <section id="income">
-            <h2>Income Tracking</h2>
-            <!-- Add your income tracking form and fields here -->
-        </section>
+  <section id="accountList"></section>
 
-        <section id="expenses">
-            <h2>Expense Tracking</h2>
-            <!-- Add your expense tracking form and fields here -->
-        </section>
-
-        <section id="budget">
-            <h2>Budgeting</h2>
-            <!-- Add your budgeting form and fields here -->
-        </section>
-
-        <section id="summary">
-            <h2>Weekly Summary</h2>
-            <!-- Add the weekly summary of expenses and budget here -->
-        </section>
-
-        <section id="savings">
-            <h2>Savings</h2>
-            <!-- Add your savings tracking form and fields here -->
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 MyFinance Tracker. All rights reserved.</p>
-    </footer>
-
-    <script src="app.js"></script> <!-- Link to the JavaScript file -->
+  <script src="app.js"></script>
 </body>
 </html>

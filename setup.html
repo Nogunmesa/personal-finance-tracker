@@ -1,50 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyFinance Tracker - setup</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>MyFinance Tracker | Setup</title>
 </head>
 <body>
-    <header>
-        <h1>MyFinance Tracker</h1>
-    </header>
-
+  <header>
+    <h1>MyFinance Tracker | Setup</h1>
     <nav>
-        <ul>
-            <li><a href="index.html">Dashboard</a></li>
-            <li><a href="transactions.html">Transactions</a></li>
-            <li><a href="setup.html">Setup</a></li>
-        </ul>
+      <a href="index.html">Dashboard</a>
+      <a href="setup.html">Setup</a>
+      <a href="transactions.html">Transactions</a>
     </nav>
+  </header>
 
-    <main>
-        <section id="setup">
-            <h2>Setup</h2>
-            <form id="accountForm">
-                <label for="accountType">Account Type:</label>
-                <select id="accountType" name="accountType">
-                    <option value="savings">Savings</option>
-                    <option value="checking">Checking</option>
-                    <!-- Add more options for other account types as needed -->
-                </select>
+  <form id="setupForm">
+    <label for="type">Type:</label>
+    <input type="text" id="type" required>
 
-                <label for="accountName">Custom Account Name:</label>
-                <input type="text" id="accountName" name="accountName" placeholder="e.g. My Savings">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
 
-                <label for="currentAmount">Current Amount:</label>
-                <input type="number" id="currentAmount" name="currentAmount" placeholder="e.g. 1000">
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" required>
 
-                <input type="submit" value="Add Account">
-            </form>
-        </section>
-    </main>
+    <button type="submit">Add Account</button>
+  </form>
 
-    <footer>
-        <p>&copy; 2023 MyFinance Tracker. All rights reserved.</p>
-    </footer>
+  <section id="userInput">
+    <h2>Your Input:</h2>
+    <p><strong>Type:</strong> <span id="displayType"></span></p>
+    <p><strong>Name:</strong> <span id="displayName"></span></p>
+    <p><strong>Amount:</strong> $<span id="displayAmount"></span></p>
+  </section>
 
-    <script src=""app.js></script> <!-- Link to the JavaScript file -->
+  <script src="app.js"></script>
 </body>
 </html>
