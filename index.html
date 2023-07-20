@@ -1,42 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Personal Finance Tracker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFinance Tracker - Dashboard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Your content will go here -->
     <header>
-        <h1>Personal Finance Tracker</h1>
-        <!-- Add any other header elements or logo here -->
+        <h1>MyFinance Tracker</h1>
     </header>
-    
-    <nav>
-        <!-- Add navigation links here -->
-    </nav>
-    
-    <!-- Where user are able to fill in necessary incomes-->
-    <section class="entry-form">
-        <h2>Expense and Income Entry</h2>
-        <form>
-            <label for="amount">Amount:</label>
-            <input type="number" id="amount" placeholder="Enter amount">
-    
-            <label for="description">Description:</label>
-            <input type="text" id="description" placeholder="Enter description">
-    
-            <!-- Add more fields as needed, like date, category, etc. -->
-    
-            <button type="submit">Submit</button>
-        </form>
-    </section>
 
-    <section class="budget-summary">
-        <h2>Budget Summary</h2>
-        <p>Total Income: $<span id="total-income">0.00</span></p>
-        <p>Total Expenses: $<span id="total-expenses">0.00</span></p>
-        <p>Remaining Budget: $<span id="remaining-budget">0.00</span></p>
-    </section>
-    <script src="script.js"></script>
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="transactions.html">Transactions</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="income">
+            <h2>Income Tracking</h2>
+            <!-- Add your income tracking form and fields here -->
+        </section>
+
+        <section id="expenses">
+            <h2>Expense Tracking</h2>
+            <!-- Add your expense tracking form and fields here -->
+        </section>
+
+        <section id="budget">
+            <h2>Budgeting</h2>
+            <!-- Add your budgeting form and fields here -->
+        </section>
+
+        <section id="summary">
+            <h2>Weekly Summary</h2>
+            <!-- Add the weekly summary of expenses and budget here -->
+        </section>
+
+        <section id="savings">
+            <h2>Savings</h2>
+            <!-- Add your savings tracking form and fields here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 MyFinance Tracker. All rights reserved.</p>
+    </footer>
 </body>
 </html>
