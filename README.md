@@ -2,8 +2,6 @@
 A user-friendly web app to track expenses, manage budgets, and set savings goals, empowering better financial management.
 
 
-Sure! Here's a description for the personal finance tracker:
-
 Title: MyFinanceTracker - Your Personal Finance Assistant
 
 Description:
