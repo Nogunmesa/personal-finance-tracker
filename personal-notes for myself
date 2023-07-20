@@ -1,0 +1,44 @@
+Personal Finance tracker
+
+Key Features:
+Expense tracking, income tracking, budgeting, and reporting
+
+You put in however bank account you have. (e.g. 2 saving accounts and 1 checkings).
+Savings account 1: Where I receive my income      Saving account 2: saving
+      Receive money and make an allowance for the entire month
+      All expected expenses you have to pay (Food, music, subscription, clothes)-- customizable
+      When you receive a paycheck, 50% goes to saving and we do budgeting for the other expenses. If my paycheck is biweekly, it factors it in for the whole month and helps to divide how much should be spent realistically per week to be good for the entire month. 
+
+At the end of every week, it gives us a summary of how much we spent for each allocated allowance and it redivides it again for how much we should be spend each week to make sure that we stay under the budget. At the end of the month it should tell us a statistic of how much we were able to save and give us a more realistic budget for the next month based on how much we've spent.
+
+-------------------------------------------------------------------------------------
+Re-vamped 
+
+Expense Tracking: Users can enter and categorize their expenses, including food, music, subscriptions, clothes, etc. The tracker should allow users to customize expense categories and set budgets for each category.
+
+Income Tracking: Users can log their income, including paychecks and other sources of income. The tracker should provide an overview of total income for the month.
+
+Budgeting: The tracker will help users create a budget based on their income and set financial goals. It will allocate a portion of the income to savings and divide the remaining funds into expense categories.
+
+Savings Accounts: Users can add multiple savings accounts and specify their purposes, such as emergency fund, vacation, or major purchases.
+
+Allocation of Funds: The tracker will automatically allocate a percentage of each paycheck to different savings accounts and expenses based on user-defined rules.
+
+Weekly Summary: At the end of each week, the tracker will provide a summary of expenses for each category and compare them to the allocated budget. It will also recalculate the weekly budget to ensure users stay on track.
+
+Monthly Savings Statistics: At the end of the month, the tracker will generate statistics on total savings, total expenses, and the percentage of income saved. It will also provide insights on spending patterns and areas for improvement.
+
+Realistic Budget Planning: The tracker will use data from previous months to suggest a more realistic budget for the upcoming month, factoring in fluctuations in income and expenses.
+
+Additional Considerations:
+
+User-Friendly Interface: Design a clean and intuitive user interface that makes it easy for users to enter and track their financial data.
+
+Data Privacy and Security: Implement strong security measures to protect users' financial information and ensure data privacy.
+
+Customization: Allow users to customize their budgeting rules and set specific savings goals.
+
+Visualization: Include charts and graphs to visually represent spending habits and savings progress.
+
+Mobile App: Consider developing a mobile app for easy access and on-the-go tracking.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
