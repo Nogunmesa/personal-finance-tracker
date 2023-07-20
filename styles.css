@@ -24,4 +24,34 @@ header {
     padding: 1rem;
     margin: 1rem 0;
   }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#accountForm {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#accountForm label, #accountForm input, #accountForm select, #accountForm button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#registeredAccounts {
+    border: 1px solid #ddd;
+    padding: 20px;
+}
   
