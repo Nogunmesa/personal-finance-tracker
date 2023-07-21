@@ -1,40 +1,20 @@
+// server.js
 const express = require('express');
 const app = express();
-const port = 3000; // You can change the port number as needed
+const port = 3000;
 
-// Body parser middleware to parse JSON data
-app.use(express.json());
+// Sample data for existing accounts
+const existingAccounts = [
+  { id: 1, accountType: "savings", accountName: "My Savings", currentAmount: 5000 },
+  { id: 2, accountType: "checkings", accountName: "My Checking", currentAmount: 2500 },
+  { id: 3, accountType: "savings", accountName: "Vacation Fund", currentAmount: 1000 },
+];
 
-// Temporary in-memory storage for accounts
-let accounts = [];
+// API endpoint to fetch account data
+app.get('/api/accounts', (req, res) => {
+  res.json(existingAccounts);
+});
 
-// Define API endpoints here
-// Add a new account
-app.post('/api/accounts', (req, res) => {
-    const { type, name, amount } = req.body;
-    if (!type || !name || isNaN(amount)) {
-      return res.status(400).json({ error: 'Invalid input. Please provide valid account data.' });
-    }
-  
-    const newAccount = { type, name, amount };
-    accounts.push(newAccount);
-  
-    res.status(201).json(newAccount);
-  });
-  
-  // Get all accounts
-  app.get('/api/accounts', (req, res) => {
-    res.json(accounts);
-  });
-  
-  // Get account summaries
-  app.get('/api/accounts/summary', (req, res) => {
-    const totalBalance = accounts.reduce((total, account) => total + account.amount, 0);
-    const totalSavings = accounts.filter(account => account.type === 'savings').reduce((total, account) => total + account.amount, 0);
-  
-    res.json({ totalBalance, totalSavings });
-  });
-  app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
-  });
-    
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});

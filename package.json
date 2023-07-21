@@ -2,9 +2,11 @@
   "name": "myfinancetracker",
   "version": "1.0.0",
   "description": "A user-friendly web app to track expenses, manage budgets, and set savings goals, empowering better financial management.",
-  "main": "script.js",
+  "main": "server.js",
   "scripts": {
-    "test": "Jest"
+    "start": "node server.js",
+    "test": "Jest",
+    "build": "react-scripts build"
   },
   "repository": {
     "type": "git",
