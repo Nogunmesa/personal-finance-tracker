@@ -35,12 +35,14 @@ function clearFormFields() {
 
 // Call this function when the page loads to set up any existing accounts
 function setupExistingAccounts() {
-   const existingAccounts = getAccountsFromServer();
-   if (existingAccounts) {
-       for (const account of existingAccounts) {
-           addAccountToList(account);
-       }
-   }
+  // Uncomment and use this function to populate accounts from server data if available.
+  // Sample:
+  // const existingAccounts = getAccountsFromServer();
+  // if (existingAccounts) {
+  //     for (const account of existingAccounts) {
+  //         addAccountToList(account);
+  //     }
+  // }
 }
 
 // Call the setupExistingAccounts function to populate existing accounts on page load
