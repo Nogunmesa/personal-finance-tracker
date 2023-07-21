@@ -1,56 +1,47 @@
-const accountList = document.getElementById('accountList');
-const setupForm = document.getElementById('setupForm');
-const typeInput = document.getElementById('type');
-const nameInput = document.getElementById('name');
-const amountInput = document.getElementById('amount');
+// Function to create a new account
+function createAccount() {
+  const accountType = document.getElementById('accountType').value;
+  const accountName = document.getElementById('accountName').value;
+  const currentAmount = parseFloat(document.getElementById('currentAmount').value);
 
-setupForm.addEventListener('submit', function (event) {
-  event.preventDefault();
+  if (accountName && !isNaN(currentAmount)) {
+      const account = {
+          accountType: accountType,
+          accountName: accountName,
+          currentAmount: currentAmount
+      };
 
-  const type = typeInput.value;
-  const name = nameInput.value;
-  const amount = parseFloat(amountInput.value);
-
-  // Get the stored accounts from localStorage or initialize an empty array
-  const storedAccounts = JSON.parse(localStorage.getItem('accounts')) || [];
-
-  // Add the new account to the array
-  storedAccounts.push({ type, name, amount });
-
-  // Store the updated accounts array in localStorage
-  localStorage.setItem('accounts', JSON.stringify(storedAccounts));
-
-  // Display the updated accounts on the dashboard
-  displayAccounts();
-
-  // Clear the form inputs
-  setupForm.reset();
-});
-
-function displayAccounts() {
-  const accounts = JSON.parse(localStorage.getItem('accounts')) || [];
-  accountList.innerHTML = '';
-
-  accounts.forEach(account => {
-    const accountCard = document.createElement('div');
-    accountCard.classList.add('account-card');
-
-    const accountType = document.createElement('p');
-    accountType.textContent = `Type: ${account.type}`;
-
-    const accountName = document.createElement('p');
-    accountName.textContent = `Name: ${account.name}`;
-
-    const currentAmount = document.createElement('p');
-    currentAmount.textContent = `Current Amount: $${account.amount}`;
-
-    accountCard.appendChild(accountType);
-    accountCard.appendChild(accountName);
-    accountCard.appendChild(currentAmount);
-
-    accountList.appendChild(accountCard);
-  });
+      addAccountToList(account);
+      clearFormFields();
+  } else {
+      alert("Please fill in all the fields with valid data.");
+  }
 }
 
-// Call displayAccounts() to initially display the accounts on the dashboard
-displayAccounts();
+// Function to add the new account to the list
+function addAccountToList(account) {
+  const accountsList = document.getElementById('accountsList');
+  const listItem = document.createElement('li');
+  listItem.textContent = `Type: ${account.accountType}, Name: ${account.accountName}, Amount: ${account.currentAmount}`;
+  accountsList.appendChild(listItem);
+}
+
+// Function to clear form fields after creating an account
+function clearFormFields() {
+  document.getElementById('accountType').value = 'savings';
+  document.getElementById('accountName').value = '';
+  document.getElementById('currentAmount').value = '';
+}
+
+// Call this function when the page loads to set up any existing accounts
+function setupExistingAccounts() {
+   const existingAccounts = getAccountsFromServer();
+   if (existingAccounts) {
+       for (const account of existingAccounts) {
+           addAccountToList(account);
+       }
+   }
+}
+
+// Call the setupExistingAccounts function to populate existing accounts on page load
+setupExistingAccounts();
