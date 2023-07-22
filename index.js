@@ -2,14 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import App from './App';
+import Transactions from './Transactions';
+import Setup from './Setup'; // Import the Setup component
 
 ReactDOM.render(
   <Router>
     <Switch>
       <Route exact path="/" component={App} />
-      {/* Add other routes for transactions and setup pages if needed */}
-      {/* <Route path="/transactions" component={Transactions} />
-      <Route path="/setup" component={Setup} /> */}
+      <Route path="/transactions" component={Transactions} />
+      <Route path="/setup" component={Setup} /> {/* Add this route for Setup page */}
     </Switch>
   </Router>,
   document.getElementById('root')
